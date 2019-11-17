@@ -40,15 +40,19 @@ p, h2 {
  margin-top: .2em;
 }
 .hamburger:hover:before {
-  transform: translateY(.1em) rotate(90deg);
+  transform: translateY(.1rem) rotate(90deg);
   width: 100%;
 }
 
 .hamburger:hover:after {
-  transform: translateY(-.25em) rotate(180deg);
+  transform: translateY(-.25rem) rotate(180deg);
   width: 100%;
 }
 
-.hamburger_open {
-  /*make plus into x?*/
+.hamburger.hamburger_open:before {
+  transform: translateY(.1rem) rotate(135deg);
+}
+
+.hamburger.hamburger_open:after {
+  transform: translateY(-.25rem) rotate(-135deg);
 }
