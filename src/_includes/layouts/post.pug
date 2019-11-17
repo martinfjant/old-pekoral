@@ -1,0 +1,14 @@
+---
+layout: layouts/base.pug
+---
+main
+  section.flex.flex-col.justify-center(class = "md:flex-row")
+    h1.text-xl.display-box.px-5.w-xl #{title}
+      br
+      cite Martin falk johansson
+        - var foo = Date.now();
+      br
+      date #{foo}
+
+    article
+      | !{content}

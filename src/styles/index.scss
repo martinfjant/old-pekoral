@@ -1,7 +1,54 @@
-@import '_reset.scss';
+@tailwind base;
 
-$var: white;
+@tailwind components;
 
-body {
-  background-color: $var;
+@tailwind utilities;
+
+
+p, h2 {
+  @apply px-5 pb-2 max-w-xl
+}
+
+.hamburger {
+  background: transparent;
+
+  border: 0 none;
+
+  cursor: pointer;
+
+  display: inline-block;
+  font-size: 2rem;
+  height: 1em;
+  padding: 0;
+  transition: transform .2s ease-in-out;
+  vertical-align: middle;
+
+  width: 1em;
+}
+.hamburger:before, .hamburger:after {
+   content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+ 
+  margin-bottom: .2em;
+  transition: transform .1s ease-in-out;
+  background: #fff;
+}
+
+.hamburger:before {
+ margin-top: .3em;
+}
+.hamburger:hover:before {
+  transform: translateY(.1em) rotate(90deg);
+  width: 60%;
+}
+
+.hamburger:hover:after {
+  transform: translateY(-.15em) rotate(180deg);
+  width: 60%;
+}
+
+.hamburger_open {
+  /*make plus into x?*/
 }

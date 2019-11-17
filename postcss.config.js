@@ -1,8 +1,3 @@
-module.exports = ({
-  plugins: {
-    autoprefixer: true,
-    cssnano: {
-      preset: 'default'
-    }
-  }
-})
+module.exports = {
+  plugins: [require('tailwindcss'), require('autoprefixer')],
+};
