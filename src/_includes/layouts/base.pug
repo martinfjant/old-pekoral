@@ -20,16 +20,17 @@ html.no-js(lang='en')
             div.text-white.hidden(class="md:block") Pekoral
           div.group(class="w-1/2")
             button#hamburger.hamburger.m-1(class="md:hidden") 
-              span
+              span.hidden Menu
             ul#menu.block.absolute.top-12.left-0.w-full.m-0.hidden.bg-black(class="group-hover:absolute md:flex justify-end md:w-auto md:relative md:bg-transparent")
               li.p-2 Blog
               li.p-2 Om
               li.p-2 Arkiv
-        menu.m-0.p-0
-          button#lookingglass.p-2 
-            i.la.la-search
-          form#search.block.absolute.bg-black.top-12.left-0.w-full.hidden.flex.justify-center(action="")
-            input.m-5.rounded.text-black(type="search")
+        menu.m-0.p-0.flex.justify-center.items-center
+          div
+            button#lookingglass.search
+              span.hidden Search
+            form#search.block.absolute.top-12.left-0.w-full.m-0.hidden.bg-black(action="")
+              input.m-5.rounded.text-black(type="search")
     | !{content}
     footer
       p.text-center &copy; Martin 2019
