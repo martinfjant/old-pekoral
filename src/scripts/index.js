@@ -14,5 +14,6 @@ const search = document.getElementById('search');
 lookingglass.addEventListener('click', toggle_search);
 
 function toggle_search() {
+  lookingglass.classList.toggle('search_open');
   search.classList.toggle('hidden');
 }
