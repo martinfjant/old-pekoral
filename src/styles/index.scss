@@ -4,10 +4,13 @@
 
 @tailwind utilities;
 
-
-p, h2 {
-  @apply px-5 pb-2 max-w-xl
+p:first-child::first-letter {
+ 
+    color: #c69c6d;
+    -webkit-initial-letter: 2;
+    margin: 1em .2em 0 0;
 }
+
 
 .hamburger {
   background: transparent;

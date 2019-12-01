@@ -1,11 +1,9 @@
 ---
 layout: layouts/post.pug
-title: Title Strings
+title: Pekoral på vift
 ---
 
-## This is global data
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt commodi facere illo recusandae, tempore totam, sunt
+L<span class="capitalize text-bold">orem ipsum dolor</span> sit amet consectetur adipisicing elit. Incidunt commodi facere illo recusandae, tempore totam, sunt
 corrupti maxime excepturi inventore perspiciatis et illum minus repellendus nesciunt. Amet ex itaque quisquam!
 
 ## Jesuss
