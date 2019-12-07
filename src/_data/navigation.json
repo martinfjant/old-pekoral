@@ -1,1 +1,5 @@
-{}
+[
+  { "name": "Blog", "url": "/" },
+  { "name": "Om", "url": "/om/" },
+  { "name": "Arkiv", "url": "/arkiv/" }
+]

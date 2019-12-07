@@ -5,49 +5,47 @@
 @tailwind utilities;
 
 p:first-child::first-letter {
- 
-    color: #c69c6d;
-    -webkit-initial-letter: 2;
-    margin: 1em .2em 0 0;
+  color: #c69c6d;
+  -webkit-initial-letter: 2;
+  margin: 1em 0.2em 0 0;
 }
-
 
 .hamburger {
   background: transparent;
-   border: none;
+  border: none;
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
   height: 1.5rem;
   padding: 0;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   vertical-align: middle;
   width: 1.5rem;
 }
-.hamburger:before, .hamburger:after {
-   content: "";
+.hamburger:before,
+.hamburger:after {
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
-  margin-bottom: .3em;
-  transition: transform .1s ease-in-out;
+  margin-bottom: 0.3em;
+  transition: transform 0.1s ease-in-out;
   background: #fff;
 }
 
 .hamburger:before {
- margin-top: .2em;
+  margin-top: 0.2em;
 }
 
 .hamburger.hamburger_open:before {
-  transform: translate(-0.35rem, .25rem)  rotate(135deg);
+  transform: translate(-0.35rem, 0.25rem) rotate(135deg);
   width: 2.12rem;
 }
 
 .hamburger.hamburger_open:after {
-  transform: translate(-0.35rem, -.15rem)  rotate(-135deg);
+  transform: translate(-0.35rem, -0.15rem) rotate(-135deg);
   width: 2.12rem;
 }
-
 
 .search {
   border: none;
@@ -55,51 +53,73 @@ p:first-child::first-letter {
   font-size: 1rem;
   height: 1.5em;
   padding: 0;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   vertical-align: middle;
   width: 1.5em;
-    &:hover {
-      cursor: pointer;
-    }
-    &::before {
-      content: "";
-      display: block;
-      height: 1px;
-      background: white;
-      transform: translateY(1rem) translateX(.8rem) rotate(45deg);
-      transition: transform .1s ease-in-out;
-      width: .5em;
-      height: 1px;
-      
-    }
-    &:after {
-      content: " ";
-      display: block;
-      width: 1em;
-      height: 1em;
-      border-radius: 50%;
-      border: 1px solid white;
-      transform: translateY(-.1rem);
-      transition: transform .1s ease-in-out;
-      transition: border-radius .1s ease-in-out;
-      
-    }
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: white;
+    transform: translateY(1rem) translateX(0.8rem) rotate(45deg);
+    transition: transform 0.1s ease-in-out;
+    width: 0.5em;
+    height: 1px;
+  }
+  &:after {
+    content: " ";
+    display: block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform: translateY(-0.1rem);
+    transition: transform 0.1s ease-in-out;
+    transition: border-radius 0.1s ease-in-out;
+  }
+}
+.search.search_open {
+}
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  .search.search_open {
-    &:before {
-        height: 1px;
-        transform: translate(-.4rem, .05rem) rotate(-135deg);
-        width: 2.12rem;
-        
-      }
-    &::after {
-        border-bottom: 0px;
-        border-left: 0px;
-        border-radius: 0px;
-        border-right: 0px;
-        height: 1px;
-        transform: translate(-.4rem, 0rem) rotate(135deg);
-        width: 2.12rem;
-      }
+  to {
+    transform: rotate(360deg);
   }
+}
+
+.spin:hover {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.marquee {
+  height: 200px;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.track {
+  animation: marquee 32s linear infinite;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
