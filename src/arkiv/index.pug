@@ -1,4 +1,6 @@
 ---
 layout: layouts/base.pug 
 ---
-| !{content}
+ul
+  each post in collections.post
+    li=post.data.title

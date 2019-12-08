@@ -101,7 +101,6 @@ p:first-child::first-letter {
 }
 
 .marquee {
-  height: 200px;
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
@@ -110,7 +109,6 @@ p:first-child::first-letter {
 
 .track {
   animation: marquee 32s linear infinite;
-  position: absolute;
   white-space: nowrap;
   will-change: transform;
 }
