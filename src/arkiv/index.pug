@@ -1,6 +1,9 @@
 ---
 layout: layouts/base.pug 
 ---
-ul
-  each post in collections.post
-    li=post.data.title
+main.max-w-3xl.m-auto(class="md:mt-20")
+  ul
+    each post in collections.post
+      li
+        a(href=post.url)=post.data.title
+        b= post.data.datum

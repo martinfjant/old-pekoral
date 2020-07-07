@@ -22,7 +22,7 @@ module.exports = function(text) {
 
   // remove short and less meaningful words
   var result = dedupedStr.replace(
-    /\b(\.|\,|the|a|an|and|am|you|I|to|if|of|off|me|my|on|in|it|is|at|as|we|do|be|has|but|was|so|no|not|or|up|for)\b/gi,
+    /\b(\.|\,|the|a|an|and|am|you|I|to|if|of|off|me|my|on|in|it|is|at|as|we|do|be|has|but|was|so|no|not|or|up|for|den|det|en|ett|och|är|har|hade|du|man|jag|att|om|av|på|för|mig|min|som|vilken|vilket|vilka|var|så|inte)\b/gi,
     ""
   );
   //remove newlines, and punctuation

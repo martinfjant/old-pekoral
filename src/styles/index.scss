@@ -4,12 +4,15 @@
 
 @tailwind utilities;
 
-p:first-child::first-letter {
+main p:first-child::first-letter {
   color: #c69c6d;
   -webkit-initial-letter: 2;
   margin: 1em 0.2em 0 0;
 }
 
+.text-block {
+  max-width: 55ch;
+}
 .hamburger {
   background: transparent;
   border: none;

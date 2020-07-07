@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.pug
 title: En sträv eftersmak
+datum: 21/9/94
 tags: post
 ---
 

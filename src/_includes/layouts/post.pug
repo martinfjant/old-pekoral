@@ -3,10 +3,10 @@ layout: layouts/base.pug
 ---
 main.max-w-3xl.m-auto(class="md:mt-20")
   section.flex.flex-col.justify-center(class = "md:flex-row")
-    aside.flex.px-5.w-xl.mb-6.text-right(class = "flex-col")
-      h1.text-5xl.leading-tight.font-serif.border-b.border-solid.border-black #{title}
+    aside.flex.w-xl.mb-6.text-right.mx-10(class = "flex-col md:mx-1 md:px-5")
+      h1.text-5xl.leading-tight.font-serif.border-b.border-solid.border-black.m-0 #{title}
       cite.text-xl Martin Falk Johansson
       date.text-xl 01-12-12019
 
-    article.max-w-lg.hyphens-auto.c-rich-text.text-xl.text-justify
+    article.text-block.hyphens-auto.c-rich-text.text-xl.text-justify.mx-10(class="md:mx-1")
       | !{content}
